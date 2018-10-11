@@ -1,5 +1,28 @@
 <html>
-<head>Text2Neural demo</head>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <h3>Table Header</h3>
+        <table>
+            <tr>
+                <th>player</th>
+                <th>no . </th>
+                <th>nationality</th>
+                <th>years in toronto</th>
+            </tr>
+        </table>
 
-
+        <div id="app">
+            <form>
+                Enter NL query: <input id="nldescription" type="text"><br>
+            </form>
+            <!--<p>{{ message }}</p>-->
+            <button v-on:click="generateSql">Generate SQL</button>
+            <p id="sql_message">{{ sql_message }}</p>
+        </div>
+        
+        <script src="index.js"></script>
+    </body>
 </html>
