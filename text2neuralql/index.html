@@ -4,6 +4,7 @@
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
+        <div id="table">
         <h3>Table Header</h3>
         <table>
             <tr>
@@ -13,12 +14,13 @@
                 <th>years in toronto</th>
             </tr>
         </table>
+        </div>
 
+        <h3>Query</h3>
         <div id="app">
             <form>
-                Enter NL query: <input id="nldescription" type="text"><br>
+                Enter NL query: <input id="nldescription" type="text" size="80" placeholder="e.g. how many years has ross played ?"><br>
             </form>
-            <!--<p>{{ message }}</p>-->
             <button v-on:click="generateSql">Generate SQL</button>
             <p id="sql_message">{{ sql_message }}</p>
         </div>

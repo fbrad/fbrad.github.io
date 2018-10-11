@@ -15,8 +15,9 @@ var vm = new Vue({
   		xhttp.open("POST", "https://www.floydlabs.com/serve/KRaueSY6gNBdtLsd8UtH2W", true);
   		xhttp.setRequestHeader("Content-Type", "application/json");
   		nlDescription = document.getElementById("nldescription").value
+      wikiTableSchema = "player <end> no . <end> nationality <end> position <end> years in toronto <end> "
 
-  		sourceObj = [{"src": nlDescription, 
+  		sourceObj = [{"src": wikiTableSchema + nlDescription, 
   			  "id":100}]
   		xhttp.send(JSON.stringify(sourceObj));
 	}
