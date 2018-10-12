@@ -1,19 +1,5 @@
-html, body {
-    margin: 5px;
-    padding: 0;
-}
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-tr:nth-child(even) {
-    background-color: #dddddd;
+h1,h3 {
+  margin-top: 3rem;
 }
 .list-group {
 	flex-direction: row;
@@ -25,4 +11,12 @@ tr:nth-child(even) {
 }
 .sql-tables>li {
 	list-style: none;
+}
+
+.card:not(:last-child) {
+  margin-right: 15px;
+}
+
+.card-columns .card {
+  margin-bottom: 0;
 }
