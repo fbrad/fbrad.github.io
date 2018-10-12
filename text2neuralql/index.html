@@ -1,30 +1,84 @@
 <html>
     <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="index.css">
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
-    <body>
-        <div id="table">
-        <h3>Table Header</h3>
-        <table>
-            <tr>
-                <th>player</th>
-                <th>no . </th>
-                <th>nationality</th>
-                <th>years in toronto</th>
-            </tr>
-        </table>
-        </div>
 
-        <h3>Query</h3>
-        <div id="app">
-            <form>
-                Enter NL query: <input id="nldescription" type="text" size="80" placeholder="e.g. how many years has ross played ?"><br>
+    <body>
+        <div id="app" class="container">
+            <h3>Tables</h3>        
+            <div class="list-group card-columns">
+              <a href="#" data-toggle="list" style="max-width:33%" v-on:click="setHeader1" class="card list-group-item list-group-item-action align-items-start active">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Table 1</h5>
+                </div>
+                <ul class="sql-tables">
+                    <li>player</li>
+                    <li>no.</li>
+                    <li>nationality</li>
+                    <li>position</li>
+                    <li>years in toronto</li>
+                    <li>school/club team</li>
+                </ul>
+              </a>
+
+              <a href="#" data-toggle="list" style="max-width:33%" v-on:click="setHeader2" class="card list-group-item list-group-item-action align-items-start">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Table 2</h5>
+                </div>
+                <ul class="sql-tables">
+                    <li>member</li>
+                    <li>electorate</li>
+                    <li>province</li>
+                    <li>term</li>
+                    <li>election date</li>
+                </ul>
+              </a>
+
+              <a href="#" data-toggle="list" style="max-width:34%" v-on:click="setHeader3" class="card list-group-item list-group-item-action align-items-start">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Table 3</h5>
+                </div>
+                <ul class="sql-tables">
+                    <li>track</li>
+                    <li>song</li>
+                    <li>singers</li>
+                    <li>picturization</li>
+                    <li>length</li>
+                    <li>lyricist</li>
+                </ul>
+              </a>
+            </div>
+
+
+            <h3>Query</h3>
+<!--             <form>
+                <label for="nldescription">Enter query in English: </label>
+                <input type="text" id="nldescription" placeholder="e.g. how many years has ross played ?">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              <button v-on:click="generateSql">Generate SQL</button>
             </form>
-            <button v-on:click="generateSql">Generate SQL</button>
-            <p id="sql_message">{{ sql_message }}</p>
-        </div>
+            <p id="sqlMessage">{{ sqlMessage }}</p> -->
+
+            <form>
+                <div class="form-group">
+                Enter NL query: <input id="nldescription" class="form-control" type="text" size="80" placeholder="e.g. how many years has ross played ?"><br>
+                </div>
+            </form>
+            <button class="btn btn-primary" v-on:click="generateSql">Generate SQL</button>
+            
+            <h3>Query result</h3>
+
+            <div class="alert alert-secondary" role="alert">
+                <p id="sqlMessage">{{ sqlMessage }}</p>
+            </div>
+            
         
+        </div>
         <script src="index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
 </html>

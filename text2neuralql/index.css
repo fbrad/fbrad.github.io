@@ -15,3 +15,14 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+.list-group {
+	flex-direction: row;
+}
+.sql-tables {
+	margin: 0;
+	margin-left: 1rem;
+	padding: 0;
+}
+.sql-tables>li {
+	list-style: none;
+}
