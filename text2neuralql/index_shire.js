@@ -22,7 +22,7 @@ var vm = new Vue({
       			var responseJson = eval(this.response)
       			document.getElementById("sqlMessage").innerHTML = responseJson[0][0]["tgt"]
     		}};
-  		xhttp.open("POST", "http://nimbus.bitdefender.net/nlp2sql", true);
+  		xhttp.open("POST", "https://nimbus.bitdefender.net/nlp2sql", true);
   		xhttp.setRequestHeader("Content-Type", "application/json");
   		nlDescription = document.getElementById("nldescription").value
 
